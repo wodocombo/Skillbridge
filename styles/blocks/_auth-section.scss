@@ -1,0 +1,14 @@
+@use "../helpers" as *;
+
+.auth-section {
+    &__body {
+        display: grid;
+        grid-template-columns: 52% 1fr;
+
+        gap: fluid(100, 50);
+
+        @include tablet {
+            grid-template-columns: 1fr;
+        }
+    }
+}

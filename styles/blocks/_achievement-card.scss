@@ -1,0 +1,47 @@
+@use "../helpers" as *;
+
+.achievement-card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: rem(30);
+
+    height: 100%;
+
+    padding: fluid(50, 30);
+
+    @include laptop {
+        row-gap: rem(24);
+    }
+
+    &__icon {
+        --iconSize: #{rem(34)};
+
+        @include square(var(--iconSize));
+
+        color: var(--color-orange-50);
+
+        @include laptop {
+            --iconSize: #{rem(28)};
+        }
+
+        &-inner {
+            --innerSize: #{rem(66)};
+
+            @include square(var(--innerSize));
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: var(--color-orange-97);
+
+            border: rem(1) solid var(--color-orange-90);
+            border-radius: rem(8);
+
+            @include laptop {
+                --innerSize: #{rem(56)};
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+@use "../helpers" as *;
+
+.button {
+    --paddingBlock: #{rem(14)};
+    --paddingInline: #{rem(34)};
+
+    padding: var(--paddingBlock) var(--paddingInline);
+
+    color: var(--color-grey-15);
+
+    background-color: var(--color-light);
+
+    border: var(--border);
+    border-radius: rem(8);
+
+    transition-duration: var(--transition-duration);
+
+    @include laptop {
+        --paddingBlock: #{rem(12)};
+        --paddingInline: #{rem(24)};
+
+        border-radius: rem(6);
+    }
+
+    @include mobile {
+        --paddingInline: #{rem(20)};
+    }
+
+    @include hover {
+        color: var(--color-light);
+
+        background-color: var(--color-dark);
+    }
+
+    &--accent {
+        color: var(--color-light);
+
+        background-color: var(--color-orange-50);
+        border: none;
+    }
+
+    &--secondary {
+        --paddingBlock: #{rem(18)};
+        --paddingInline: #{rem(24)};
+
+        @include laptop {
+            --paddingBlock: #{rem(14)};
+            --paddingInline: #{rem(20)};
+        }
+
+        @include mobile {
+            --paddingBlock: #{rem(12)};
+            --paddingInline: #{rem(20)};
+        }
+    }
+}

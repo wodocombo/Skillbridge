@@ -1,0 +1,23 @@
+@use "../helpers" as *;
+
+.logo {
+    --colorLogo: var(--color-light);
+    --colorLogoPadding: var(--color-orange-50);
+
+    --logoSize: #{fluid(54, 40)};
+
+    @include square(var(--logoSize));
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    rect {
+        color: var(--colorLogoPadding);
+    }
+
+    path {
+        color: var(--colorLogo);
+    }
+}

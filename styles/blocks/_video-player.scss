@@ -1,0 +1,73 @@
+@use "../helpers" as *;
+
+.video-player {
+    position: relative;
+    border-radius: rem(10);
+
+    overflow: hidden;
+
+    &__video {
+        height: fluid(790, 247);
+
+        object-fit: cover;
+    }
+
+    &__control-panel {
+        display: none;
+
+        &--active {
+            position: absolute;
+            inset: 0;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            background-color: rgba(#000, 0.2);
+        }
+    }
+
+    &__button {
+        --size: #{rem(86)};
+
+        @include square(var(--size));
+
+        @include flex-center(true);
+
+        padding: 0;
+        background: rgba(255, 255, 255, 0.2);
+        border: rem(6) solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+
+        background-clip: padding-box;
+
+        transition-duration: var(--transition-duration);
+
+        svg {
+            color: var(--color-light);
+        }
+
+        @include laptop {
+            --size: #{rem(62)};
+
+            svg {
+                @include square(rem(34));
+            }
+        }
+
+        @include hover {
+            background-color: color-mix(
+                in srgb,
+                var(--color-orange-50) 20%,
+                transparent
+            );
+
+            border-color: rgba(255, 255, 255, 0.6);
+
+            svg {
+                color: var(--color-orange-50);
+            }
+        }
+    }
+}

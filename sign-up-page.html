@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/main.css" />
+        <script src="scripts/main.js" type="module"></script>
+        <title>Skillbridge | Login Page</title>
+    </head>
+    <body>
+        <header class="header container" data-js-header>
+            <div class="header__promo">
+                <a href="/" class="header__promo-link">
+                    Free Courses🌟Sale Ends Soon, Get It Now
+
+                    <span class="header__promo-icon">
+                        <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M3.59961 12C3.59961 11.5029 4.00255 11.1 4.49961 11.1L17.2651 11.1L12.2758 6.34874C11.9175 6.00423 11.9063 5.43449 12.2509 5.0762C12.5954 4.7179 13.1651 4.70673 13.5234 5.05125L20.1234 11.3512C20.2999 11.5209 20.3996 11.7552 20.3996 12C20.3996 12.2448 20.2999 12.4791 20.1234 12.6487L13.5234 18.9487C13.1651 19.2933 12.5954 19.2821 12.2509 18.9238C11.9063 18.5655 11.9175 17.9958 12.2758 17.6512L17.2651 12.9L4.49961 12.9C4.00255 12.9 3.59961 12.4971 3.59961 12Z"
+                                fill="white"
+                            />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+
+            <div class="header__body">
+                <div class="header__inner">
+                    <div class="header__logo logo">
+                        <svg
+                            width="54"
+                            height="54"
+                            viewBox="0 0 54 54"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <rect
+                                width="54"
+                                height="54"
+                                rx="8"
+                                fill="#FF9500"
+                            />
+                            <path
+                                d="M11.167 43.6667L22.0003 32.8333H32.8337V22L43.667 32.8333L32.8337 43.6667H11.167Z"
+                                fill="white"
+                            />
+                            <path
+                                d="M11.167 22L22.0003 32.8333V22H32.8337L43.667 11.1667H22.0003L11.167 22Z"
+                                fill="white"
+                            />
+                        </svg>
+                    </div>
+
+                    <nav class="header__menu" data-js-menu>
+                        <ul class="header__menu-list header__menu-list">
+                            <li class="header__menu-item">
+                                <a
+                                    href="./index.html"
+                                    class="header__menu-link"
+                                >
+                                    Home
+                                </a>
+                            </li>
+
+                            <li class="header__menu-item">
+                                <a
+                                    href="./courses-page.html"
+                                    class="header__menu-link"
+                                >
+                                    Courses
+                                </a>
+                            </li>
+
+                            <li class="header__menu-item">
+                                <a
+                                    href="./about-us.html"
+                                    class="header__menu-link"
+                                >
+                                    About Us
+                                </a>
+                            </li>
+
+                            <li class="header__menu-item">
+                                <a
+                                    href="./pricing.html"
+                                    class="header__menu-link"
+                                >
+                                    Pricing
+                                </a>
+                            </li>
+
+                            <li class="header__menu-item">
+                                <a
+                                    href="./contact-page.html"
+                                    class="header__menu-link"
+                                >
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="header__actions">
+                    <div class="header__auth">
+                        <a
+                            href="./sign-up-page.html"
+                            class="header__auth-sign-up"
+                            >Sign Up</a
+                        >
+
+                        <a
+                            href="./login-page.html"
+                            class="header__auth-login button button--accent"
+                            >Login</a
+                        >
+                    </div>
+
+                    <button
+                        class="header__burger-button"
+                        type="button"
+                        data-js-burger-button
+                        aria-expanded="false"
+                        aria-label="Открыть меню"
+                    ></button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="auth-section">
+                <div class="auth-section__body container" data-auth-container>
+                    <div
+                        class="auth-section__testimonials testimonials"
+                        data-auth-secondary-block
+                    >
+                        <div class="testimonials__text">
+                            <h2 class="testimonials__title">
+                                Students Testimonials
+                            </h2>
+
+                            <p class="testimonials__subtitle">
+                                Lorem ipsum dolor sit amet consectetur. Tempus
+                                tincidunt etiam eget elit id imperdiet et. Cras
+                                eu sit dignissim lorem nibh et. Ac cum eget
+                                habitasse in velit fringilla feugiat senectus
+                                in.
+                            </p>
+                        </div>
+
+                        <div class="testimonials__body">
+                            <div
+                                class="slider"
+                                data-testimonials-slider-container
+                            >
+                                <ul
+                                    class="testimonials__card-list slider__list"
+                                    data-testimonials-slider
+                                >
+                                    <li
+                                        class="testimonials__card-item slider__item"
+                                        data-testimonials-slider-item
+                                    >
+                                        <div class="review-card tile">
+                                            <div class="review-card__body">
+                                                <p>
+                                                    The web design course
+                                                    provided a solid foundation
+                                                    for me. The instructors were
+                                                    knowledgeable and
+                                                    supportive, and the
+                                                    interactive learning
+                                                    environment was engaging. I
+                                                    highly recommend it!
+                                                </p>
+                                            </div>
+
+                                            <div class="review-card__info">
+                                                <div
+                                                    class="review-card__author"
+                                                >
+                                                    <img
+                                                        src="./images/our-reviews/1.jpg"
+                                                        alt="Review author: Sarah L"
+                                                        class="review-card__author-image"
+                                                        width="60"
+                                                        height="60"
+                                                        loading="lazy"
+                                                    />
+
+                                                    <span
+                                                        class="review-card__author-name"
+                                                    >
+                                                        Sarah L
+                                                    </span>
+                                                </div>
+
+                                                <a
+                                                    href="/"
+                                                    class="review-card__link button"
+                                                    data-testimonials-slider-link
+                                                >
+                                                    Read More
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li
+                                        class="card-grid__item slider__item"
+                                        data-testimonials-slider-item
+                                    >
+                                        <div class="review-card tile">
+                                            <div class="review-card__body">
+                                                <p>
+                                                    The UI/UX design course
+                                                    exceeded my expectations.
+                                                    The instructor's expertise
+                                                    and practical assignments
+                                                    helped me improve my design
+                                                    skills. I feel more
+                                                    confident in my career now.
+                                                    Thank you!
+                                                </p>
+                                            </div>
+
+                                            <div class="review-card__info">
+                                                <div
+                                                    class="review-card__author"
+                                                >
+                                                    <img
+                                                        src="./images/our-reviews/2.jpg"
+                                                        alt="Review author: Jason M"
+                                                        class="review-card__author-image"
+                                                        width="60"
+                                                        height="60"
+                                                        loading="lazy"
+                                                    />
+
+                                                    <span
+                                                        class="review-card__author-name"
+                                                    >
+                                                        Jason M
+                                                    </span>
+                                                </div>
+
+                                                <a
+                                                    href="/"
+                                                    class="review-card__link button"
+                                                    data-testimonials-slider-link
+                                                >
+                                                    Read Full Story
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="card-grid__item slider__item"
+                                        data-testimonials-slider-item
+                                    >
+                                        <div class="review-card tile">
+                                            <div class="review-card__body">
+                                                <p>
+                                                    The mobile app development
+                                                    course was fantastic! The
+                                                    step-by-step tutorials and
+                                                    hands-on projects helped me
+                                                    grasp the concepts easily.
+                                                    I'm now building my own app.
+                                                    Great course!
+                                                </p>
+                                            </div>
+
+                                            <div class="review-card__info">
+                                                <div
+                                                    class="review-card__author"
+                                                >
+                                                    <img
+                                                        src="./images/our-reviews/3.jpg"
+                                                        alt="Review author: Emily R"
+                                                        class="review-card__author-image"
+                                                        width="60"
+                                                        height="60"
+                                                        loading="lazy"
+                                                    />
+
+                                                    <span
+                                                        class="review-card__author-name"
+                                                    >
+                                                        Emily R
+                                                    </span>
+                                                </div>
+
+                                                <a
+                                                    href="/"
+                                                    class="review-card__link button"
+                                                    data-testimonials-slider-link
+                                                >
+                                                    Read Full Story
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="card-grid__item slider__item"
+                                        data-testimonials-slider-item
+                                    >
+                                        <div class="review-card tile">
+                                            <div class="review-card__body">
+                                                <p>
+                                                    I enrolled in the graphic
+                                                    design course as a beginner,
+                                                    and it was the perfect
+                                                    starting point. The
+                                                    instructor's guidance and
+                                                    feedback improved my design
+                                                    abilities significantly. I'm
+                                                    grateful for this course!
+                                                </p>
+                                            </div>
+
+                                            <div class="review-card__info">
+                                                <div
+                                                    class="review-card__author"
+                                                >
+                                                    <img
+                                                        src="./images/our-reviews/4.jpg"
+                                                        alt="Review author: Michael K"
+                                                        class="review-card__author-image"
+                                                        width="60"
+                                                        height="60"
+                                                        loading="lazy"
+                                                    />
+
+                                                    <span
+                                                        class="review-card__author-name"
+                                                    >
+                                                        Michael K
+                                                    </span>
+                                                </div>
+
+                                                <a
+                                                    href="/"
+                                                    class="review-card__link button"
+                                                    data-testimonials-slider-link
+                                                >
+                                                    Read Full Story
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <div class="testimonials__actions">
+                                    <button
+                                        type="button"
+                                        class="testimonials__button"
+                                        data-testimonials-slider-button-prev
+                                    >
+                                        <svg
+                                            class="testimonials__button-icon"
+                                            width="34"
+                                            height="34"
+                                            viewBox="0 0 34 34"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M25.5 17C25.5 17.7042 24.9292 18.275 24.225 18.275H12.9405L16.6087 21.606C17.1163 22.094 17.1321 22.9011 16.6441 23.4087C16.156 23.9163 15.3489 23.9321 14.8413 23.4441L8.89129 17.9191C8.64129 17.6787 8.5 17.3468 8.5 17C8.5 16.6532 8.64129 16.3213 8.89129 16.081L14.8413 10.556C15.3489 10.0679 16.156 10.0837 16.6441 10.5913C17.1321 11.0989 17.1163 11.906 16.6087 12.3941L12.9405 15.725H24.225C24.9292 15.725 25.5 16.2959 25.5 17Z"
+                                                fill="#262626"
+                                            />
+                                        </svg>
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="testimonials__button"
+                                        data-testimonials-slider-button-next
+                                    >
+                                        <svg
+                                            class="testimonials__button-icon"
+                                            width="34"
+                                            height="34"
+                                            viewBox="0 0 34 34"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M8.5 17C8.5 16.2958 9.07084 15.725 9.775 15.725H21.0595L17.3913 12.3941C16.8837 11.906 16.8679 11.0989 17.3559 10.5913C17.844 10.0837 18.6511 10.0679 19.1587 10.556L25.1087 16.081C25.3587 16.3213 25.5 16.6532 25.5 17C25.5 17.3468 25.3587 17.6787 25.1087 17.9191L19.1587 23.4441C18.6511 23.9321 17.844 23.9163 17.3559 23.4087C16.8679 22.9011 16.8837 22.094 17.3913 21.606L21.0595 18.275H9.775C9.07084 18.275 8.5 17.7042 8.5 17Z"
+                                                fill="#262626"
+                                            />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="auth-section__auth-form auth-form"
+                        data-auth-form-block
+                    >
+                        <div class="auth-form__text">
+                            <h2 class="auth-form__title">Sign Up</h2>
+
+                            <p class="auth-form__subtitle">
+                                Create an account to unlock exclusive features.
+                            </p>
+                        </div>
+
+                        <div class="auth-form__body">
+                            <form
+                                action="/"
+                                method="post"
+                                class="auth-form__fields"
+                            >
+                                <div class="auth-form__field field">
+                                    <label for="full-name" class="field__label">
+                                        Full Name
+                                    </label>
+
+                                    <div class="field__input-wrapper">
+                                        <input
+                                            id="full-name"
+                                            class="field__input"
+                                            type="text"
+                                            name="full-name"
+                                            placeholder="Enter your Name"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div class="auth-form__field field">
+                                    <label for="email" class="field__label">
+                                        Email
+                                    </label>
+
+                                    <div class="field__input-wrapper">
+                                        <input
+                                            id="email"
+                                            class="field__input"
+                                            type="email"
+                                            name="email"
+                                            placeholder="Enter your Email"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div class="auth-form__field field">
+                                    <label for="password" class="field__label">
+                                        Password
+                                    </label>
+
+                                    <div
+                                        class="field__input-wrapper"
+                                        data-js-password-toggle
+                                    >
+                                        <input
+                                            id="password"
+                                            class="field__input"
+                                            type="password"
+                                            name="password"
+                                            placeholder="Enter your Password"
+                                            data-js-password-input
+                                        />
+
+                                        <button
+                                            class="field__password-toggle"
+                                            aria-label="Показать пароль"
+                                            type="button"
+                                            data-js-password-button
+                                        >
+                                            <svg
+                                                class="field__password-toggle-icon"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M12.001 15C13.6578 15 15.001 13.6569 15.001 12C15.001 10.3431 13.6578 9 12.001 9C10.3441 9 9.00098 10.3431 9.00098 12C9.00098 13.6569 10.3441 15 12.001 15Z"
+                                                    fill="#4C4C4D"
+                                                />
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    clip-rule="evenodd"
+                                                    d="M1.32439 11.4467C2.81164 6.97571 7.02889 3.75 12.0015 3.75C16.9718 3.75 21.1874 6.97271 22.6765 11.4405C22.7969 11.8015 22.797 12.1922 22.6769 12.5533C21.1896 17.0243 16.9723 20.25 11.9997 20.25C7.02945 20.25 2.81381 17.0273 1.32472 12.5595C1.20437 12.1985 1.20426 11.8078 1.32439 11.4467ZM17.251 12C17.251 14.8995 14.9005 17.25 12.001 17.25C9.10148 17.25 6.75098 14.8995 6.75098 12C6.75098 9.1005 9.10148 6.75 12.001 6.75C14.9005 6.75 17.251 9.1005 17.251 12Z"
+                                                    fill="#4C4C4D"
+                                                />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="auth-form__field field">
+                                    <div class="field__checkbox">
+                                        <input
+                                            id="checkbox"
+                                            class="field__checkbox-state visually-hidden"
+                                            type="checkbox"
+                                            name="checkbox"
+                                        />
+
+                                        <label
+                                            class="field__checkbox-label"
+                                            for="checkbox"
+                                        >
+                                            <span class="field__checkbox-text">
+                                                I agree with
+
+                                                <a
+                                                    href="/"
+                                                    class="field__checkbox-terms"
+                                                >
+                                                    Terms of Use
+                                                </a>
+
+                                                and
+
+                                                <a
+                                                    href="/"
+                                                    class="field__checkbox-terms"
+                                                    >Privacy Policy</a
+                                                >
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <button
+                                    class="auth-form__sumbit-button button button--accent"
+                                    type="submit"
+                                >
+                                    Login
+                                </button>
+                            </form>
+
+                            <div class="auth-form__divider">
+                                <span class="auth-form__divider-text">OR</span>
+                            </div>
+
+                            <a href="/" class="auth-form__google">
+                                <svg
+                                    class="auth-form__google-icon"
+                                    width="30"
+                                    height="30"
+                                    viewBox="0 0 30 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <g clip-path="url(#clip0_38_3002)">
+                                        <path
+                                            d="M29.7083 15.3456C29.7083 14.3259 29.6256 13.3007 29.4493 12.2976H15.3008V18.0738H23.4029C23.0667 19.9368 21.9864 21.5848 20.4046 22.632V26.3799H25.2383C28.0768 23.7674 29.7083 19.9092 29.7083 15.3456Z"
+                                            fill="#4285F4"
+                                        />
+                                        <path
+                                            d="M15.2989 30.001C19.3445 30.001 22.7562 28.6727 25.242 26.3799L20.4082 22.6319C19.0634 23.5469 17.3272 24.065 15.3044 24.065C11.3911 24.065 8.07311 21.4249 6.88259 17.8754H1.89453V21.739C4.44092 26.8043 9.6274 30.001 15.2989 30.001Z"
+                                            fill="#34A853"
+                                        />
+                                        <path
+                                            d="M6.87895 17.8753C6.25063 16.0124 6.25063 13.9951 6.87895 12.1322V8.26849H1.89641C-0.231095 12.507 -0.231095 17.5005 1.89641 21.739L6.87895 17.8753Z"
+                                            fill="#FBBC04"
+                                        />
+                                        <path
+                                            d="M15.2989 5.93708C17.4374 5.90401 19.5043 6.70871 21.0531 8.18583L25.3356 3.90327C22.6239 1.35688 19.0248 -0.0430825 15.2989 0.00101083C9.6274 0.00101083 4.44092 3.19778 1.89453 8.26851L6.87708 12.1322C8.06209 8.57716 11.3856 5.93708 15.2989 5.93708Z"
+                                            fill="#EA4335"
+                                        />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_38_3002">
+                                            <rect
+                                                width="30"
+                                                height="30"
+                                                fill="white"
+                                            />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                                <span class="auth-form__google-text">
+                                    Login with Google
+                                </span>
+                            </a>
+
+                            <div class="auth-form__note">
+                                <span class="auth-form__note-text">
+                                    Already have an account?
+
+                                    <a href="/" class="auth-form__note-link">
+                                        Login
+
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M6.00005 19L19 5.99996M19 5.99996V18.48M19 5.99996H6.52005"
+                                                stroke="#262626"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__inner container">
+                <div class="footer__body">
+                    <div class="footer__info">
+                        <div class="footer__logo logo">
+                            <svg
+                                width="54"
+                                height="54"
+                                viewBox="0 0 54 54"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <rect
+                                    width="54"
+                                    height="54"
+                                    rx="8"
+                                    fill="#FF9500"
+                                ></rect>
+                                <path
+                                    d="M11.167 43.6667L22.0003 32.8333H32.8337V22L43.667 32.8333L32.8337 43.6667H11.167Z"
+                                    fill="white"
+                                ></path>
+                                <path
+                                    d="M11.167 22L22.0003 32.8333V22H32.8337L43.667 11.1667H22.0003L11.167 22Z"
+                                    fill="white"
+                                ></path>
+                            </svg>
+                        </div>
+
+                        <div class="footer__info-contacts">
+                            <a
+                                href="mailto:hello@skillbridge.com"
+                                class="footer__info-item footer__info-item--mail"
+                            >
+                                hello@skillbridge.com
+                            </a>
+
+                            <a
+                                href="tel:+9191813232309"
+                                class="footer__info-item footer__info-item--tel"
+                            >
+                                +91 91813 23 2309
+                            </a>
+
+                            <span
+                                class="footer__info-item footer__info-item--address"
+                            >
+                                Somewhere in the World
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="footer__navs">
+                        <nav class="footer__nav" aria-label="Home navigation">
+                            <h3 class="footer__title">Home</h3>
+                            <ul class="footer__list">
+                                <li class="footer__item">
+                                    <a href="/" class="footer__link"
+                                        >Benefits</a
+                                    >
+                                </li>
+
+                                <li class="footer__item">
+                                    <a href="/" class="footer__link"
+                                        >Our Courses</a
+                                    >
+                                </li>
+
+                                <li class="footer__item">
+                                    <a href="/" class="footer__link"
+                                        >Our Testimonials</a
+                                    >
+                                </li>
+
+                                <li class="footer__item">
+                                    <a href="/" class="footer__link">Our FAQ</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <nav
+                            class="footer__nav"
+                            aria-label="About Us navigation"
+                        >
+                            <h3 class="footer__title">About Us</h3>
+                            <ul class="footer__list">
+                                <li class="footer__item">
+                                    <a href="/" class="footer__link">Company</a>
+                                </li>
+
+                                <li class="footer__item">
+                                    <a href="/" class="footer__link"
+                                        >Achievements</a
+                                    >
+                                </li>
+
+                                <li class="footer__item">
+                                    <a href="/" class="footer__link"
+                                        >Our Goals</a
+                                    >
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <div class="footer__socials">
+                            <h3 class="footer__title">Social Profiles</h3>
+
+                            <ul class="footer__socials-list socials-list">
+                                <li class="socials-list__item socials-icon">
+                                    <a
+                                        href="/"
+                                        class="socials-icon__link"
+                                        aria-label="Facebook"
+                                    >
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <g clip-path="url(#clip0_2057_497)">
+                                                <path
+                                                    d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4687H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92187 17.3438 4.92187V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4687H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z"
+                                                    fill="#333333"
+                                                />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_2057_497">
+                                                    <rect
+                                                        width="24"
+                                                        height="24"
+                                                        fill="white"
+                                                    />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </a>
+                                </li>
+
+                                <li class="socials-list__item socials-icon">
+                                    <a
+                                        href="/"
+                                        class="socials-icon__link"
+                                        aria-label="Twitter"
+                                    >
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M7.55016 21.7497C16.6045 21.7497 21.5583 14.2465 21.5583 7.74162C21.5583 7.53068 21.5536 7.31505 21.5442 7.10412C22.5079 6.40722 23.3395 5.54401 24 4.55505C23.1025 4.95436 22.1496 5.21514 21.1739 5.32849C22.2013 4.71266 22.9705 3.74523 23.3391 2.60552C22.3726 3.17831 21.3156 3.58237 20.2134 3.80037C19.4708 3.01132 18.489 2.48887 17.4197 2.31381C16.3504 2.13874 15.2532 2.32081 14.2977 2.83185C13.3423 3.3429 12.5818 4.15446 12.1338 5.14107C11.6859 6.12767 11.5754 7.23437 11.8195 8.29005C9.86249 8.19185 7.94794 7.68346 6.19998 6.79785C4.45203 5.91225 2.90969 4.66919 1.67297 3.14927C1.0444 4.233 0.852057 5.5154 1.13503 6.73585C1.418 7.95629 2.15506 9.0232 3.19641 9.71974C2.41463 9.69492 1.64998 9.48444 0.965625 9.10568V9.16662C0.964925 10.3039 1.3581 11.4063 2.07831 12.2865C2.79852 13.1667 3.80132 13.7703 4.91625 13.9947C4.19206 14.1929 3.43198 14.2218 2.69484 14.0791C3.00945 15.0572 3.62157 15.9126 4.44577 16.5261C5.26997 17.1395 6.26512 17.4804 7.29234 17.501C5.54842 18.8709 3.39417 19.6139 1.17656 19.6104C0.783287 19.6098 0.390399 19.5857 0 19.5382C2.25286 20.9835 4.87353 21.7511 7.55016 21.7497Z"
+                                                fill="#333333"
+                                            />
+                                        </svg>
+                                    </a>
+                                </li>
+
+                                <li class="socials-list__item socials-icon">
+                                    <a
+                                        href="/"
+                                        class="socials-icon__link"
+                                        aria-label="LinkedIn"
+                                    >
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <g clip-path="url(#clip0_2057_503)">
+                                                <path
+                                                    d="M22.2234 0H1.77187C0.792187 0 0 0.773438 0 1.72969V22.2656C0 23.2219 0.792187 24 1.77187 24H22.2234C23.2031 24 24 23.2219 24 22.2703V1.72969C24 0.773438 23.2031 0 22.2234 0ZM7.12031 20.4516H3.55781V8.99531H7.12031V20.4516ZM5.33906 7.43438C4.19531 7.43438 3.27188 6.51094 3.27188 5.37187C3.27188 4.23281 4.19531 3.30937 5.33906 3.30937C6.47813 3.30937 7.40156 4.23281 7.40156 5.37187C7.40156 6.50625 6.47813 7.43438 5.33906 7.43438ZM20.4516 20.4516H16.8937V14.8828C16.8937 13.5562 16.8703 11.8453 15.0422 11.8453C13.1906 11.8453 12.9094 13.2937 12.9094 14.7891V20.4516H9.35625V8.99531H12.7687V10.5609H12.8156C13.2891 9.66094 14.4516 8.70938 16.1813 8.70938C19.7859 8.70938 20.4516 11.0813 20.4516 14.1656V20.4516Z"
+                                                    fill="#333333"
+                                                />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_2057_503">
+                                                    <rect
+                                                        width="24"
+                                                        height="24"
+                                                        fill="white"
+                                                    />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__copyright">
+                    <span class="footer__copyright-text">
+                        © 2023 Skillbridge. All rights reserved.
+                    </span>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+@use "../helpers" as *;
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__body {
+        padding: fluid(50, 30);
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: fluid(30, 20) fluid(50, 30);
+        background-color: var(--color-light-99);
+
+        border-top: var(--border);
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+        column-gap: rem(15);
+
+        @include laptop {
+            column-gap: rem(10);
+        }
+
+        &-image {
+            border-radius: rem(8);
+
+            @include laptop {
+                border-radius: rem(6);
+            }
+        }
+
+        &-name {
+            font-size: rem(18);
+            font-weight: 600;
+            line-height: 1.5;
+
+            color: var(--color-grey-20);
+
+            @include laptop {
+                font-size: rem(16);
+            }
+        }
+    }
+
+    &__link {
+        align-items: center;
+
+        padding: rem(18) rem(24);
+        border: var(--border);
+        border-radius: rem(8);
+
+        font-size: rem(18);
+        font-weight: 500;
+        line-height: 1.5;
+        color: var(--color-grey-15);
+
+        @include laptop {
+            padding: rem(14) rem(16);
+            border-radius: rem(6);
+
+            font-size: rem(14);
+        }
+    }
+}

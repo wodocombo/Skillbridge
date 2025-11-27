@@ -1,0 +1,54 @@
+@use "../helpers" as *;
+
+.card-grid {
+    --countColumn: 1;
+
+    display: grid;
+    grid-template-columns: repeat(var(--countColumn), 1fr);
+
+    gap: rem(30);
+
+    @include laptop {
+        gap: rem(20);
+    }
+
+    &__item {
+        @include flex-center(false);
+
+        min-width: 0;
+    }
+
+    &--2-columns {
+        --countColumn: 2;
+    }
+
+    &--3-columns {
+        --countColumn: 3;
+
+        @include tablet {
+            --countColumn: 2;
+        }
+
+        @include mobile {
+            --countColumn: 1;
+        }
+    }
+
+    &--adaptive {
+        &-tablet {
+            @include tablet {
+                --countColumn: 1;
+            }
+        }
+
+        &-phablet {
+            @include phablet {
+                --countColumn: 1;
+            }
+        }
+    }
+
+    &--main {
+        gap: fluid(50, 20);
+    }
+}

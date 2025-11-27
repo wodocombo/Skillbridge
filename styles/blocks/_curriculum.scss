@@ -1,0 +1,44 @@
+@use "../helpers" as *;
+
+.curriculum {
+    --offset: #{fluid(50, 20)};
+
+    border: var(--border);
+
+    &__title {
+        padding: fluid(24, 14) fluid(30, 20);
+    }
+
+    &__list {
+        display: flex;
+        gap: var(--offset);
+
+        padding: fluid(30, 24) fluid(50, 24);
+
+        border-top: var(--border);
+
+        @include phablet {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            @include phablet-above {
+                padding-right: var(--offset);
+
+                border-right: var(--border);
+            }
+
+            @include phablet {
+                padding-bottom: var(--offset);
+
+                border-bottom: var(--border);
+            }
+        }
+    }
+
+    &__enum {
+        @include fluid-text(50, 30);
+    }
+}

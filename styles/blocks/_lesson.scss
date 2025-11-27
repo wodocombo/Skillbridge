@@ -1,0 +1,112 @@
+@use "../helpers" as *;
+
+.lesson {
+    @mixin hoverFocusStyles {
+        box-shadow: 0 0 0 rem(4) var(--color-orange-80);
+
+        .lesson__duration {
+            color: var(--color-grey-30);
+            background-color: var(--color-orange-90);
+        }
+    }
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: rem(6);
+
+    padding: rem(24) rem(30);
+
+    border: var(--border);
+    border-radius: rem(8);
+
+    transition-duration: var(--transition-duration);
+
+    @include laptop {
+        padding: rem(20) rem(24);
+        border-radius: rem(6);
+    }
+
+    @include tablet {
+        flex-direction: column;
+        align-items: start;
+        row-gap: rem(24);
+    }
+
+    @include mobile {
+        flex-direction: column;
+        row-gap: rem(24);
+
+        padding: rem(24);
+    }
+
+    &__body {
+        display: grid;
+        row-gap: rem(6);
+
+        @include laptop {
+            row-gap: rem(2);
+        }
+    }
+
+    &__title {
+        font-size: rem(20);
+        font-weight: 500;
+        @include laptop {
+            font-size: rem(16);
+        }
+    }
+
+    &__number {
+        color: var(--color-grey-35);
+    }
+
+    &__duration {
+        display: flex;
+        align-items: center;
+        column-gap: rem(4);
+        flex-shrink: 0;
+
+        padding: rem(12) rem(14);
+
+        background-color: var(--color-light-97);
+
+        border-radius: rem(6);
+
+        transition-duration: var(--transition-duration);
+
+        @include laptop {
+            padding: rem(10);
+        }
+
+        &::before {
+            @include square(rem(20));
+
+            content: "";
+            display: inline-block;
+
+            background: url("../../icon/duration.svg");
+        }
+    }
+
+    @mixin hoverFocusStyles {
+        box-shadow: 0 0 0 rem(4) var(--color-orange-80);
+        outline: none;
+
+        .lesson__duration {
+            color: var(--color-grey-30);
+            background-color: var(--color-orange-90);
+        }
+    }
+
+    &:focus-visible {
+        @include hoverFocusStyles();
+    }
+    @include hover {
+        @include hoverFocusStyles();
+    }
+
+    &:-webkit-any-link {
+        color: initial;
+    }
+}

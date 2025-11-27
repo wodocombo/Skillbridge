@@ -1,0 +1,58 @@
+@use "helpers" as *;
+
+.container {
+    width: 100%;
+    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    padding-inline: var(--container-padding-x);
+    margin-inline: auto;
+}
+
+.visually-hidden {
+    @include visually-hidden;
+}
+
+.hidden-mobile {
+    @include mobile {
+        display: none !important;
+    }
+}
+
+.visibble-mobile {
+    @include mobile-above {
+        display: none !important;
+    }
+}
+
+.u-custom {
+    &-list {
+        counter-reset: item;
+    }
+
+    &-counter {
+        counter-increment: item;
+
+        &::before {
+            content: counter(item, decimal-leading-zero);
+        }
+    }
+}
+
+.numeric-text {
+    font-family: var(--font-family-base);
+    font-size: fluid(80, 50);
+    font-weight: 700;
+
+    color: var(--color-grey-15);
+}
+
+.tile {
+    background-color: var(--color-light);
+    border: var(--border);
+    border-radius: rem(12);
+
+    overflow: hidden;
+
+    @include laptop {
+        border-radius: rem(10);
+    }
+}

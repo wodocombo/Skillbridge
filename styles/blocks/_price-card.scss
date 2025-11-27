@@ -1,0 +1,138 @@
+@use "../helpers" as *;
+
+.price-card {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(50);
+
+    height: 100%;
+
+    padding-block: fluid(50, 30) fluid(30, 20);
+    padding-inline: fluid(30, 20);
+
+    background-color: var(--color-light-99);
+
+    @include mobile {
+        row-gap: rem(30);
+    }
+
+    &__plan {
+        @include fluid-text(22, 16);
+
+        padding: rem(12) rem(22);
+
+        background-color: var(--color-orange-97);
+
+        border: rem(1) solid var(--color-orange-90);
+        border-radius: rem(6);
+
+        line-height: 1.6;
+        text-align: center;
+
+        @include laptop {
+            border-radius: rem(4);
+        }
+    }
+
+    &__price {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+
+        &-period {
+            @include fluid-text(20, 14);
+
+            font-weight: 500;
+            line-height: 0.7;
+            color: var(--color-grey-30);
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        background-color: var(--color-light);
+    }
+
+    &__features {
+        display: flex;
+        flex-direction: column;
+        gap: fluid(30, 20);
+
+        flex-grow: 1;
+
+        padding: fluid(40, 20);
+
+        border: var(--border);
+        border-radius: rem(14) rem(14) 0 0;
+
+        @include mobile {
+            border-radius: rem(10) rem(10) 0 0;
+        }
+
+        &-title {
+            color: var(--color-grey-15);
+
+            font-size: rem(20);
+            font-weight: 500;
+
+            text-align: center;
+
+            @include laptop {
+                font-size: rem(18);
+            }
+        }
+    }
+
+    &__list {
+        display: grid;
+        row-gap: rem(20);
+
+        padding-inline: rem(30);
+
+        @include mobile {
+            padding-inline: rem(20);
+        }
+    }
+
+    &__item {
+        display: inline-flex;
+        align-items: center;
+        column-gap: rem(12);
+
+        padding: rem(14);
+
+        border: var(--border);
+        border-radius: rem(8);
+
+        @include laptop {
+            column-gap: rem(8);
+
+            padding: rem(12);
+            border-radius: rem(6);
+        }
+
+        &-icon {
+            flex-shrink: 0;
+            align-self: start;
+        }
+
+        &-text {
+            color: var(--color-grey-30);
+
+            font-size: rem(18);
+
+            @include laptop {
+                font-size: rem(14);
+            }
+        }
+    }
+
+    &__link {
+        @include flex-center(true);
+
+        border-radius: 0 0 rem(8) rem(8);
+    }
+}

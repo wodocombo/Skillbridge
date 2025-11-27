@@ -1,0 +1,29 @@
+@use "../helpers" as *;
+
+.slider {
+    display: flex;
+    flex-direction: column;
+
+    row-gap: fluid(30, 20);
+
+    overflow: hidden;
+
+    &__list {
+        display: flex;
+
+        transition-duration: var(--transition-duration);
+    }
+
+    &__item {
+        min-width: 100%;
+
+        transform: scale(0.5);
+
+        transition-duration: var(--transition-duration);
+
+        &--active {
+            display: flex;
+            transform: scale(1);
+        }
+    }
+}

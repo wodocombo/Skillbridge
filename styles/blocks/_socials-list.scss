@@ -1,0 +1,37 @@
+@use "../helpers" as *;
+
+.socials-list {
+    display: flex;
+    align-items: center;
+    column-gap: rem(14);
+
+    &__link {
+        --size: #{rem(52)};
+
+        @include square(var(--size));
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        color: var(--color-grey-10);
+
+        background-color: var(--color-light-97);
+
+        border: var(--border);
+        border-radius: rem(8);
+
+        transition-duration: var(--transition-duration);
+
+        @include laptop {
+            --size: #{rem(44)};
+
+            border-radius: rem(6);
+        }
+
+        @include hover {
+            color: var(--color-orange-50);
+            background-color: var(--color-orange-90);
+        }
+    }
+}

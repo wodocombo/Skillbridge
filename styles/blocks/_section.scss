@@ -1,0 +1,94 @@
+@use "../helpers" as *;
+
+.section {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(80, 40);
+
+    &__header {
+        &-inner {
+            &:has(.section__actions) {
+                display: grid;
+                grid-template-columns: 1fr auto;
+                align-items: end;
+
+                column-gap: 18.75%;
+
+                @include mobile {
+                    grid-template-columns: 1fr;
+
+                    align-items: start;
+                    row-gap: rem(20);
+                }
+            }
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(6);
+
+            @include laptop {
+                row-gap: rem(4);
+            }
+        }
+    }
+
+    &__actions {
+        display: flex;
+    }
+
+    &__link {
+        font-weight: 500;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        row-gap: fluid(80, 40);
+    }
+
+    &__price {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: rem(50);
+
+        @include mobile {
+            row-gap: rem(40);
+        }
+    }
+
+    &--main {
+        row-gap: fluid(100, 50);
+
+        > .section__header {
+            .section__header-inner {
+                margin-inline: var(--container-padding-x);
+                border-bottom: rem(1) solid var(--color-light-90);
+            }
+
+            .section__header-info {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                align-items: center;
+                column-gap: rem(100);
+
+                padding-bottom: fluid(50, 30);
+
+                @include laptop {
+                    column-gap: rem(80);
+                }
+
+                @include mobile {
+                    grid-template-columns: 1fr;
+                    row-gap: rem(16);
+                }
+            }
+        }
+
+        > .section__body {
+            row-gap: var(--total-page-gap);
+        }
+    }
+}

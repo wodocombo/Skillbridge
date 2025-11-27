@@ -1,0 +1,156 @@
+@use "../helpers" as *;
+
+.course-card {
+    display: grid;
+    row-gap: rem(30);
+
+    height: 100%;
+
+    padding: fluid(50, 24);
+
+    @include laptop {
+        row-gap: rem(24);
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(30);
+
+        @include laptop {
+            row-gap: rem(24);
+        }
+    }
+
+    &__gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: fluid(30, 10);
+    }
+
+    &__image {
+        width: 100%;
+        border-radius: rem(8);
+
+        @include mobile {
+            border-radius: rem(6);
+        }
+    }
+
+    &__meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: rem(1);
+
+        @include mobile {
+            flex-direction: column;
+            align-items: start;
+
+            row-gap: rem(14);
+        }
+    }
+
+    &__tags {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: rem(10);
+    }
+
+    &__tag {
+        &-button {
+            padding: rem(10) rem(16);
+
+            font-size: fluid(18, 14);
+            font-weight: 400;
+
+            color: var(--color-grey-30);
+
+            border: var(--border);
+            border-radius: rem(8);
+
+            transition-duration: var(--transition-duration);
+
+            @include laptop {
+                padding: rem(8) rem(14);
+                border-radius: rem(6);
+            }
+
+            @include hover {
+                color: var(--color-orange-50);
+                border-color: var(--color-orange-50);
+            }
+
+            &--active {
+                color: var(--color-light);
+                background-color: var(--color-grey-30);
+            }
+        }
+    }
+
+    &__author {
+        align-self: start;
+        flex-shrink: 0;
+
+        padding-block: rem(10);
+
+        font-size: rem(20);
+        font-weight: 500;
+        color: var(--color-grey-15);
+
+        @include laptop {
+            font-size: rem(16);
+            padding-block: rem(8);
+        }
+
+        @include mobile {
+            padding-block: rem(0);
+        }
+    }
+
+    &__link {
+        justify-content: center;
+        flex-shrink: 0;
+
+        padding: rem(18) rem(24);
+
+        background-color: var(--color-light-97);
+
+        border: var(--border);
+        border-radius: rem(8);
+
+        font-weight: 500;
+        line-height: 1.5;
+        color: var(--color-grey-15);
+
+        transition-duration: var(--transition-duration);
+
+        @include laptop {
+            padding-block: rem(14);
+            border-radius: rem(6);
+        }
+
+        @include hover {
+            color: var(--color-orange-50);
+            background: var(--color-dark);
+
+            animation: button-bounce 0.8s linear forwards;
+        }
+    }
+}
+
+@keyframes button-bounce {
+    0% {
+        transform: translateY(0);
+    } /* начальная позиция */
+    30% {
+        transform: translateY(-6px);
+    } /* прыжок вверх */
+    60% {
+        transform: translateY(3px);
+    } /* слегка вниз */
+    100% {
+        transform: translateY(0);
+    } /* вернуться назад */
+}

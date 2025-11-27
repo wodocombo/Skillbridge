@@ -1,0 +1,86 @@
+@use "../helpers" as *;
+
+.icon {
+    --size: #{rem(52)};
+
+    @include square(var(--size));
+
+    @include flex-center(true);
+
+    background-color: var(--color-orange-95);
+
+    border-radius: rem(8);
+
+    @include laptop {
+        --size: #{rem(44)};
+
+        border-radius: rem(6);
+    }
+
+    @include mobile {
+        --size: #{rem(40)};
+    }
+
+    &::after {
+        @include square(var(--iconSize));
+
+        content: "";
+        background: center/contain no-repeat;
+    }
+
+    &--small {
+        --size: #{rem(32)};
+
+        @include laptop {
+            --size: #{rem(24)};
+        }
+    }
+
+    &--check-mark::after {
+        --iconSize: #{rem(14)};
+
+        background-image: url("../../icon/check-mark.svg");
+
+        @include laptop {
+            --iconSize: #{rem(11)};
+        }
+    }
+
+    &--cross {
+        background-color: var(--color-light);
+        border: var(--border);
+
+        &::after {
+            --iconSize: #{rem(10)};
+
+            background-image: url("../../icon/cross.svg");
+
+            @include laptop {
+                --iconSize: #{rem(8)};
+            }
+        }
+    }
+
+    &--plus {
+        --size: #{fluid(52, 40)};
+
+        &::after {
+            --iconSize: #{fluid(28, 20)};
+
+            background-image: url("../../icon/plus.svg");
+        }
+    }
+
+    &--arrow-right {
+        --size: #{fluid(56, 40)};
+
+        background-color: var(--color-light);
+        border-radius: 50%;
+
+        &::after {
+            --iconSize: #{fluid(28, 20)};
+
+            background-image: url("../../icon/arrow-right.svg");
+        }
+    }
+}

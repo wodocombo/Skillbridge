@@ -1,0 +1,13 @@
+@use "../helpers" as *;
+
+.section-box {
+    padding: fluid(80, 20);
+
+    background-color: var(--color-light);
+
+    border-radius: rem(12);
+
+    &--large {
+        padding: fluid(100, 24);
+    }
+}

@@ -1,0 +1,40 @@
+@use "../helpers" as *;
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    column-gap: rem(50);
+
+    @include laptop {
+        row-gap: rem(10);
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(14);
+    }
+
+    &__title {
+        color: var(--color-grey-20);
+    }
+
+    &--main {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: rem(50);
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: rem(10);
+            align-items: start;
+        }
+
+        .card-text {
+            &__description {
+                color: var(--color-grey-35);
+            }
+        }
+    }
+}

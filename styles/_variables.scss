@@ -1,0 +1,39 @@
+@use "helpers" as *;
+
+:root {
+    --total-page-gap: #{fluid(150, 50)};
+
+    --color-dark: #000;
+
+    --color-light: #fff;
+    --color-light-90: #e4e4e7;
+    --color-light-95: #f1f1f3;
+    --color-light-97: #f7f7f8;
+    --color-light-99: #fcfcfd;
+
+    --color-orange-50: #ff9500;
+    --color-orange-80: #ffd599;
+    --color-orange-90: #ffeacc;
+    --color-orange-95: #fff4e5;
+    --color-orange-97: #fff9f0;
+
+    --color-grey-10: #191919;
+    --color-grey-15: #262626;
+    --color-grey-20: #333333;
+    --color-grey-30: #4c4c4d;
+    --color-grey-35: #59595a;
+    --color-grey-40: #656567;
+    --color-grey-60: #98989a;
+
+    --font-family-base: "Be Vietnam Pro";
+    --font-family-accent: "Inter";
+
+    --container-width: #{fluid(1600, 360)};
+    --container-padding-x: #{fluid(30, 16)};
+
+    --border: 1px solid var(--color-light-95);
+
+    --border-radius-main: #{rem(8)};
+
+    --transition-duration: 0.3s;
+}

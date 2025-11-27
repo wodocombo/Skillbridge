@@ -1,0 +1,46 @@
+@use "../helpers" as *;
+
+.question-card {
+    display: grid;
+    grid-template-columns: rem(408) 1fr;
+    column-gap: rem(120);
+
+    @include laptop {
+        grid-template-columns: clamp(20.5rem, 22.5%, #{rem(408)}) 1fr;
+        column-gap: clamp(2rem, 10%, #{rem(80)});
+    }
+
+    @include tablet {
+        grid-template-columns: 1fr;
+        row-gap: rem(40);
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        row-gap: fluid(50, 20);
+    }
+
+    &__title {
+        &-inner {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(10);
+
+            @include laptop {
+                row-gap: rem(8);
+            }
+        }
+    }
+
+    &__subtitle-link {
+        color: var(--color-grey-20);
+
+        transition-duration: var(--transition-duration);
+
+        @include hover {
+            color: var(--color-orange-50);
+        }
+    }
+}

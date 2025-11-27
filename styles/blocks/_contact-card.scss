@@ -1,0 +1,32 @@
+@use "../helpers" as *;
+
+.contact-card {
+    @include flex-center(false);
+
+    flex-direction: column;
+    gap: rem(20);
+
+    padding: rem(30);
+
+    background-color: var(--color-light-99);
+
+    border: var(--border);
+    border-radius: rem(8);
+
+    @include laptop {
+        gap: rem(14);
+        border-radius: rem(6);
+    }
+
+    &__info {
+        color: var(--color-grey-30);
+
+        transition-duration: var(--transition-duration);
+
+        &:is(a) {
+            @include hover {
+                color: var(--color-orange-50);
+            }
+        }
+    }
+}

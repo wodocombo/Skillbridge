@@ -1,0 +1,136 @@
+@use "../helpers" as *;
+
+.field {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(14);
+
+    @include laptop {
+        row-gap: rem(10);
+    }
+
+    &__label {
+        @include fluid-text(18, 14);
+
+        align-self: start;
+
+        color: var(--color-grey-15);
+    }
+
+    &__input {
+        &-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: rem(24);
+
+            background-color: var(--color-light-99);
+
+            border: var(--border);
+            border-radius: rem(10);
+
+            @include laptop {
+                padding: rem(20);
+                border-radius: rem(8);
+            }
+
+            &--textarea {
+                min-height: rem(170);
+
+                @include laptop {
+                    min-height: rem(138);
+                }
+            }
+        }
+
+        &--textarea {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__password {
+        &-toggle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            flex-shrink: 0;
+
+            color: var(--color-grey-30);
+
+            transition-duration: var(--transition-duration);
+
+            @include hover {
+                color: var(--color-orange-50);
+            }
+
+            &--active {
+                color: var(--color-orange-50);
+            }
+        }
+
+        &-forgot {
+            align-self: flex-end;
+
+            color: var(--color-grey-30);
+
+            transition-duration: var(--transition-duration);
+
+            @include hover {
+                color: var(--color-orange-50);
+            }
+        }
+    }
+
+    &__checkbox {
+        &-label {
+            display: inline-flex;
+            align-items: center;
+            column-gap: rem(10);
+
+            padding-right: 1rem;
+
+            user-select: none;
+
+            @include laptop {
+                column-gap: rem(8);
+            }
+
+            &::before {
+                @include square(rem(30));
+
+                content: "";
+
+                background-color: var(--color-light-97);
+
+                border: var(--border);
+                border-radius: rem(4);
+
+                transition-duration: var(--transition-duration);
+                transform-origin: bottom;
+            }
+        }
+
+        &-terms {
+            color: initial;
+            text-decoration: underline;
+
+            transition-duration: var(--transition-duration);
+
+            @include hover {
+                color: var(--color-orange-50);
+            }
+        }
+
+        &-state:checked + &-label::before {
+            background: url("../../icon/check-mark.svg") center no-repeat;
+            background-color: var(--color-orange-50);
+        }
+
+        &-state:focus-visible + &-label {
+            outline: auto 1px;
+        }
+    }
+}

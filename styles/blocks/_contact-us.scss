@@ -1,0 +1,69 @@
+@use "../helpers" as *;
+
+.contact-us {
+    --commonPadding: #{fluid(80, 30)};
+
+    display: grid;
+    grid-template-columns: 1fr 32.5%;
+
+    background-color: var(--color-light);
+
+    border-radius: rem(12);
+
+    @include laptop {
+        grid-template-columns: 1fr;
+    }
+
+    &__form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: fluid(30, 20);
+
+        padding: var(--commonPadding);
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__field-full {
+        grid-column: -1/1;
+    }
+
+    &__info {
+        display: grid;
+        gap: fluid(50, 24);
+
+        padding: var(--commonPadding);
+
+        @include laptop {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__message-wrapper {
+        &:not(:first-child) {
+            margin-top: fluid(20, 0);
+        }
+    }
+
+    &__button-wrapper {
+        grid-column: -1 /1;
+
+        text-align: center;
+
+        &:not(:first-child) {
+            margin-top: fluid(20, 0);
+        }
+    }
+
+    &__button {
+        @include mobile {
+            width: 100%;
+        }
+    }
+}

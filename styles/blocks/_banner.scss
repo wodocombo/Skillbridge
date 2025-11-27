@@ -1,0 +1,41 @@
+@use "../helpers" as *;
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: fluid(300, 40);
+
+    padding: fluid(80, 30);
+
+    background-color: var(--color-light);
+    background-image: url("../../icon/banner-bg-decor-icon.svg");
+    background-repeat: no-repeat;
+    background-position: right 16% center;
+
+    border-radius: rem(12);
+
+    @include laptop {
+        border-radius: rem(10);
+    }
+
+    @include phablet {
+        flex-direction: column;
+        align-items: start;
+
+        row-gap: rem(40);
+
+        background-size: rem(190);
+        background-position: right -#{rem(15)} bottom -#{rem(70)};
+    }
+
+    &__title {
+        &--accent {
+            color: var(--color-orange-50);
+        }
+    }
+
+    &__button {
+        flex-shrink: 0;
+    }
+}

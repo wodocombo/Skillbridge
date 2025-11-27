@@ -1,0 +1,165 @@
+@use "../helpers" as *;
+
+.auth-form {
+    --gapWithPadding: #{fluid(50, 30)};
+
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--gapWithPadding);
+
+    min-width: 0;
+
+    padding: var(--gapWithPadding);
+
+    background-color: var(--color-light);
+
+    border-radius: rem(12);
+
+    @include laptop {
+        border-radius: rem(10);
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        row-gap: rem(12);
+
+        text-align: center;
+
+        @include laptop {
+            row-gap: rem(8);
+        }
+    }
+
+    &__body {
+        display: grid;
+
+        row-gap: rem(30);
+
+        @include laptop {
+            row-gap: rem(24);
+        }
+    }
+
+    &__fields {
+        display: grid;
+        row-gap: rem(24);
+
+        @include laptop {
+            row-gap: rem(24);
+        }
+    }
+
+    &__divider {
+        &-text {
+            --color: var(--color-grey-60);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: rem(12);
+
+            color: var(--color);
+
+            font: var(--font-family-accent);
+
+            pointer-events: none;
+
+            &::before,
+            &::after {
+                content: "";
+
+                width: 100%;
+                height: rem(1);
+
+                background-color: var(--color);
+            }
+        }
+    }
+
+    &__google {
+        @include flex-center(true);
+
+        column-gap: rem(14);
+
+        padding: rem(20) rem(24);
+
+        color: var(--color-dark);
+        background-color: var(--color-light-97);
+
+        border: var(--border);
+        border-radius: rem(10);
+
+        transition-duration: var(--transition-duration);
+
+        @include laptop {
+            padding-block: rem(16);
+
+            border-radius: rem(8);
+        }
+
+        @include mobile {
+            border-radius: rem(6);
+        }
+
+        @include hover {
+            color: var(--color-light);
+            background-color: var(--color-orange-50);
+
+            .auth-form__google-icon {
+                animation-name: iconAnimation;
+                animation-duration: var(--transition-duration);
+            }
+        }
+
+        &-text {
+            font-weight: 500;
+        }
+
+        &-icon {
+            & path {
+                fill: revert-layer;
+            }
+        }
+    }
+
+    &__note {
+        @include flex-center(false);
+
+        text-align: center;
+
+        color: var(--color-grey-15);
+
+        &-link {
+            align-items: center;
+            column-gap: rem(6);
+
+            text-decoration: underline;
+
+            color: inherit;
+            font-weight: 500;
+
+            transition-duration: var(--transition-duration);
+
+            @include hover {
+                color: var(--color-orange-50);
+            }
+        }
+    }
+}
+
+@keyframes iconAnimation {
+    from {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}

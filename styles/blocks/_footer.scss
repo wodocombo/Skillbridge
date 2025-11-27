@@ -1,0 +1,199 @@
+@use "../helpers" as *;
+
+.footer {
+    --rowGap: #{fluid(50, 20)};
+
+    padding-block: fluid(100, 50) fluid(30, 24);
+
+    background-color: var(--color-light);
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        row-gap: var(--rowGap);
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+
+        @include phablet {
+            flex-direction: column;
+            row-gap: rem(24);
+        }
+    }
+
+    &__info {
+        display: grid;
+        row-gap: rem(40);
+
+        @include laptop {
+            row-gap: rem(30);
+        }
+
+        &-contacts {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(20);
+        }
+
+        &-item {
+            --iconBefore: url("");
+
+            display: inline-flex;
+            column-gap: rem(6);
+            align-items: center;
+
+            color: var(--color-grey-15);
+
+            transition-duration: var(--transition-duration);
+
+            &:is(a) {
+                @include hover {
+                    color: var(--color-orange-50);
+                }
+            }
+
+            &::before {
+                @include square(rem(24));
+
+                content: "";
+                background: var(--iconBefore) center/cover no-repeat;
+            }
+
+            &--mail {
+                --iconBefore: url("../../icon/mail-icon.svg");
+            }
+
+            &--tel {
+                --iconBefore: url("../../icon/tel-icon.svg");
+            }
+
+            &--address {
+                --iconBefore: url("../../icon/address-icon.svg");
+            }
+        }
+    }
+
+    &__navs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: fluid(160, 50);
+
+        @include laptop {
+            gap: fluid(160, 0);
+        }
+
+        @include tablet {
+            column-gap: rem(15);
+        }
+
+        @include phablet {
+            column-gap: rem(30);
+        }
+
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+
+            gap: rem(24) rem(30);
+        }
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(14);
+
+        @include laptop {
+            row-gap: rem(10);
+        }
+    }
+
+    &__title {
+        @include fluid-text(20, 15);
+
+        color: var(--color-grey-15);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(8);
+
+        @include mobile {
+            row-gap: rem(4);
+        }
+    }
+
+    &__link {
+        color: var(--color-grey-35);
+
+        transition-duration: var(--transition-duration);
+
+        @include hover {
+            color: var(--color-orange-50);
+        }
+    }
+
+    &__socials {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(14);
+
+        @include laptop {
+            row-gap: rem(10);
+        }
+
+        &-list {
+            display: flex;
+            align-items: center;
+            column-gap: rem(14);
+        }
+
+        &-link {
+            --size: #{rem(52)};
+
+            @include square(var(--size));
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            color: var(--color-grey-10);
+
+            background-color: var(--color-light-97);
+
+            border: var(--border);
+            border-radius: rem(8);
+
+            transition-duration: var(--transition-duration);
+
+            @include laptop {
+                --size: #{rem(44)};
+
+                border-radius: rem(6);
+            }
+
+            @include hover {
+                color: var(--color-orange-50);
+                background-color: var(--color-orange-90);
+            }
+        }
+    }
+
+    &__copyright {
+        padding-top: var(--rowGap);
+
+        border-top: var(--border);
+
+        text-align: center;
+
+        &-text {
+            @include fluid-text(18, 14);
+
+            color: var(--color-grey-40);
+        }
+    }
+}

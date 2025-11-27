@@ -1,0 +1,69 @@
+@use "../helpers" as *;
+
+.advantage-card {
+    --offset: #{fluid(50, 30)};
+
+    max-width: rem(520);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--offset);
+
+    padding: var(--offset);
+
+    &__counter {
+        align-self: flex-end;
+    }
+
+    &__link {
+        --size: #{rem(74)};
+
+        @include square(var(--size));
+
+        align-self: end;
+
+        @include flex-center(false);
+
+        background-color: var(--color-light-99);
+
+        border: var(--border);
+        border-radius: rem(8);
+
+        margin-top: auto;
+
+        transition-duration: var(--transition-duration);
+
+        @include laptop {
+            --size: #{rem(54)};
+        }
+
+        @include hover {
+            background-color: var(--color-grey-15);
+        }
+
+        &-icon {
+            --iconSize: #{rem(34)};
+
+            @include square(var(--iconSize));
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            background: url("../../icon/arrow__top-right-orange.svg")
+                center/cover no-repeat;
+
+            @include laptop {
+                --iconSize: #{rem(26)};
+            }
+
+            @include hover {
+            }
+        }
+    }
+
+    &--plan {
+        max-width: 100%;
+        width: 100%;
+    }
+}

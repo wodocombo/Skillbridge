@@ -1,0 +1,80 @@
+@use "../helpers" as *;
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(80, 40);
+
+    min-width: 0;
+
+    &__text {
+        display: grid;
+        row-gap: rem(8);
+
+        @include laptop {
+            row-gap: rem(6);
+        }
+    }
+
+    &__title {
+        font-size: fluid(38, 28);
+        font-weight: 500;
+    }
+
+    &__card {
+        &-list {
+            display: flex;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: end;
+        column-gap: rem(15);
+
+        @include laptop {
+            column-gap: rem(10);
+        }
+
+        @include mobile {
+            justify-content: center;
+        }
+    }
+
+    &__button {
+        --buttonSize: #{rem(62)};
+
+        @include square(var(--buttonSize));
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 0;
+
+        background-color: var(--color-light);
+
+        border: var(--border);
+        border-radius: rem(8);
+
+        transition-duration: var(--transition-duration);
+
+        @include laptop {
+            --buttonSize: #{rem(54)};
+        }
+
+        @include hover {
+            background-color: var(--color-orange-50);
+        }
+
+        &-icon {
+            --iconSize: #{rem(34)};
+
+            @include square(var(--iconSize));
+
+            @include laptop {
+                --iconSize: #{rem(30)};
+            }
+        }
+    }
+}

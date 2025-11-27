@@ -1,0 +1,10 @@
+@use "../helpers" as *;
+
+.lesson-list {
+    display: grid;
+    row-gap: rem(20);
+
+    @include laptop {
+        row-gap: rem(16);
+    }
+}
