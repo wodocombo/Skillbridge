@@ -39,7 +39,7 @@
     &--check-mark::after {
         --iconSize: #{rem(14)};
 
-        background-image: url("../../icon/check-mark.svg");
+        background-image: url("../icon/check-mark.svg");
 
         @include laptop {
             --iconSize: #{rem(11)};
@@ -53,7 +53,7 @@
         &::after {
             --iconSize: #{rem(10)};
 
-            background-image: url("../../icon/cross.svg");
+            background-image: url("../icon/cross.svg");
 
             @include laptop {
                 --iconSize: #{rem(8)};
@@ -67,7 +67,7 @@
         &::after {
             --iconSize: #{fluid(28, 20)};
 
-            background-image: url("../../icon/plus.svg");
+            background-image: url("../icon/plus.svg");
         }
     }
 
@@ -80,7 +80,7 @@
         &::after {
             --iconSize: #{fluid(28, 20)};
 
-            background-image: url("../../icon/arrow-right.svg");
+            background-image: url("../icon/arrow-right.svg");
         }
     }
 }

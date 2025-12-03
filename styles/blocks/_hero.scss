@@ -46,7 +46,7 @@
                 content: "";
                 right: calc(100% - var(--space));
                 bottom: calc(100% - var(--space));
-                background: url("../../icon/decorate-line.svg") center/contain
+                background: url("../icon/decorate-line.svg") center/contain
                     no-repeat;
 
                 @include mobile {
